@@ -25,6 +25,7 @@ function defaultDispatch(topic, message, packet) {
 
 export default function subscribe(opts = { dispatch: defaultDispatch }) {
     const { topic } = opts;
+    console.log(this.props)
     const dispatch = (opts.dispatch) ? opts.dispatch : defaultDispatch;
 
     return (TargetComponent) => {
